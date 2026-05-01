@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosso Quiz 💛</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-comfort">
+    <div class="floating-hearts" id="hearts-container"></div>
+
+    <div class="container py-4 mb-5 position-relative" style="z-index: 10;">
+        <header class="text-center mb-5">
+            <h1 class="font-love color-purple animate-float">O Quanto Você Conhece o Kenny?</h1>
+            <p id="quiz-progress" class="text-muted italic-text">Pergunta 1 de 10</p>
+        </header>
+
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+                <!-- ÁREA DO QUIZ -->
+                <div id="quiz-container" class="message-card shadow-lg p-4 rounded-4 text-center">
+                    <h4 id="question-text" class="fw-bold color-purple mb-4">Carregando pergunta...</h4>
+                    <div id="options-container" class="d-grid gap-3">
+                        <!-- Opções surgirão aqui via JS -->
+                    </div>
+                </div>
+
+                <!-- ÁREA DE RESULTADO (ESCONDIDA INICIALMENTE) -->
+                <div id="result-container" class="message-card shadow-lg p-5 rounded-4 text-center d-none">
+                    <div id="result-icon" class="mb-4"></div>
+                    <h1 id="result-title" class="font-love color-purple mb-3"></h1>
+                    <p id="result-score" class="highlight-text mb-4"></p>
+                    <button class="btn btn-purple-outline rounded-pill px-4" onclick="location.reload()">Tentar Novamente</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- HUB INFERIOR -->
+    <nav class="navbar fixed-bottom bg-hub border-top shadow-lg">
+        <div class="container d-flex justify-content-around">
+            <a href="index.html" class="nav-btn"><i class="fas fa-home"></i></a>
+            <a href="tempo.html" class="nav-btn"><i class="fas fa-clock"></i></a>
+            <a href="motivos.html" class="nav-btn"><i class="fas fa-list-ul"></i></a>
+            <a href="quiz.html" class="nav-btn active"><i class="fas fa-gamepad"></i></a>
+            <a href="secreto.html" class="nav-btn"><i class="fas fa-user-secret"></i></a>
+        </div>
+    </nav>
+
+    <!-- Bloqueio Global -->
+<div id="global-lock-overlay" class="lock-overlay">
+    <div class="lock-content text-center">
+        <i class="fas fa-lock fa-3x color-purple mb-4 heart-beat"></i>
+        <h1 class="font-love color-purple">Aguarde o momento especial...</h1>
+        <div id="main-countdown" class="countdown-badge shadow-lg mt-3">
+            <span id="lock-timer">00d 00h 00m 00s</span>
+        </div>
+    </div>
+</div>
+
+<!-- Envolva todo o conteúdo original (incluindo o Hub) em uma div de conteúdo -->
+<div id="site-content" style="display: none;">
+    <!-- Todo o seu código anterior aqui (Container, Modais, Hub, etc) -->
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

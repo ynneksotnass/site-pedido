@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para o Meu Amor 💛</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-comfort">
+    <div class="floating-hearts" id="hearts-container"></div>
+
+    <div class="container py-4 mb-5">
+        <header class="text-center mb-5">
+            <h1 class="font-love color-purple animate-float">Kenny & Raquel</h1>
+            <div class="countdown-badge shadow-sm">
+                <span id="countdown-special">00h 00m 00s</span>
+            </div>
+        </header>
+
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-5 text-center">
+                <div id="feedCarousel" class="carousel slide instagram-post shadow-lg" data-bs-ride="carousel" data-bs-interval="3000">
+                    <div class="carousel-inner rounded-3" onclick="openPost()">
+                        <!-- Carrossel de 19 fotos -->
+                        <div class="carousel-item active"><img src="imgs/1.jpeg" class="d-block w-100"></div>
+                        <div class="carousel-item"><img src="imgs/2.jpeg" class="d-block w-100"></div>
+                        <div class="carousel-item"><img src="imgs/3.jpeg" class="d-block w-100"></div>
+                        <div class="carousel-item"><img src="imgs/4.jpeg" class="d-block w-100"></div>
+                        <div class="carousel-item"><img src="imgs/5.jpeg" class="d-block w-100"></div>
+                        <div class="carousel-item"><img src="imgs/6.jpeg" class="d-block w-100"></div>
+                        <div class="carousel-item"><img src="imgs/7.jpeg" class="d-block w-100"></div>
+                        <div class="carousel-item"><img src="imgs/8.jpeg" class="d-block w-100"></div>
+                        <div class="carousel-item"><img src="imgs/9.jpeg" class="d-block w-100"></div>
+                        <div class="carousel-item"><img src="imgs/10.jpeg" class="d-block w-100"></div>
+                        <div class="carousel-item"><img src="imgs/11.jpeg" class="d-block w-100"></div>
+                        <div class="carousel-item"><img src="imgs/12.jpeg" class="d-block w-100"></div>
+                        <div class="carousel-item"><img src="imgs/13.jpeg" class="d-block w-100"></div>
+                        <div class="carousel-item"><img src="imgs/14.jpeg" class="d-block w-100"></div>
+                        <div class="carousel-item"><img src="imgs/15.jpeg" class="d-block w-100"></div>
+                        <div class="carousel-item"><img src="imgs/16.jpeg" class="d-block w-100"></div>
+                        <div class="carousel-item"><img src="imgs/17.jpeg" class="d-block w-100"></div>
+                        <div class="carousel-item"><img src="imgs/18.jpeg" class="d-block w-100"></div>
+                        <div class="carousel-item"><img src="imgs/19.jpeg" class="d-block w-100"></div>
+                    </div>
+                    <div class="post-overlay" onclick="openPost()">
+                        <span><i class="fas fa-heart"></i> Ver interações</span>
+                    </div>
+                </div>
+
+                <!-- TEXTO DESTACADO -->
+                <div class="mt-5 message-card shadow-lg p-4 rounded-4">
+                    <p class="highlight-text">
+                        "MOMOOOO, essa foi outra surpresa que fiz para você, um site nosso, do nosso jeitinho. Que conta brevemente um pouco da nossa pequena história, cada ano que passar vou ter que atualizar esse site para poder ficar ainda maior. É uma homenagem e uma forma de agradecimento pela pessoa e mulher que cada dia que passa minha admiração por você aumenta. Você é minha luz, minha casa, a pessoa que quero viver ao lado pelo resto da minha vida, e a pessoa em que mataria e morria. É com você que quero estar, é com você que quero me casar, é com você que quero continuar minha vidinha, e é você, que torna tudo especial. Sou grato por tudo que vivemos e tenho certeza que viveremos muito mais coisas para poder complementar esse simples site. Eu te amo meu amor, minha namorada. <span class="heart-beat">💛</span>"
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL -->
+    <div id="instaModal" class="insta-modal" onclick="closeOnBackdrop(event)">
+        <div class="modal-content-insta" onclick="event.stopPropagation()">
+            <span class="close-modal" onclick="closePost()">&times;</span>
+            <div class="row g-0 h-100">
+                <div class="col-md-7 d-flex align-items-center bg-black position-relative" ondblclick="handleLike()">
+                    <div id="modalCarousel" class="carousel slide w-100" data-bs-interval="false">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active"><img src="imgs/1.jpeg" class="w-100 img-contain"></div>
+                            <div class="carousel-item"><img src="imgs/2.jpeg" class="w-100 img-contain"></div>
+                            <div class="carousel-item"><img src="imgs/3.jpeg" class="w-100 img-contain"></div>
+                            <div class="carousel-item"><img src="imgs/4.jpeg" class="w-100 img-contain"></div>
+                            <div class="carousel-item"><img src="imgs/5.jpeg" class="w-100 img-contain"></div>
+                            <div class="carousel-item"><img src="imgs/6.jpeg" class="w-100 img-contain"></div>
+                            <div class="carousel-item"><img src="imgs/7.jpeg" class="w-100 img-contain"></div>
+                            <div class="carousel-item"><img src="imgs/8.jpeg" class="w-100 img-contain"></div>
+                            <div class="carousel-item"><img src="imgs/9.jpeg" class="w-100 img-contain"></div>
+                            <div class="carousel-item"><img src="imgs/10.jpeg" class="w-100 img-contain"></div>
+                            <div class="carousel-item"><img src="imgs/11.jpeg" class="w-100 img-contain"></div>
+                            <div class="carousel-item"><img src="imgs/12.jpeg" class="w-100 img-contain"></div>
+                            <div class="carousel-item"><img src="imgs/13.jpeg" class="w-100 img-contain"></div>
+                            <div class="carousel-item"><img src="imgs/14.jpeg" class="w-100 img-contain"></div>
+                            <div class="carousel-item"><img src="imgs/15.jpeg" class="w-100 img-contain"></div>
+                            <div class="carousel-item"><img src="imgs/16.jpeg" class="w-100 img-contain"></div>
+                            <div class="carousel-item"><img src="imgs/17.jpeg" class="w-100 img-contain"></div>
+                            <div class="carousel-item"><img src="imgs/18.jpeg" class="w-100 img-contain"></div>
+                            <div class="carousel-item"><img src="imgs/19.jpeg" class="w-100 img-contain"></div>
+                        </div>
+                        <button class="carousel-control-next" type="button" data-bs-target="#modalCarousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+                    <i class="fas fa-heart heart-pop" id="heart-anim"></i>
+                </div>
+                <div class="col-md-5 d-flex flex-column bg-card-custom text-start border-left-insta">
+                    <div class="p-3 border-bottom d-flex align-items-center">
+                        <img src="imgs/perfil.jpeg" class="avatar-img" alt="Perfil">
+                        <strong class="ms-2">Kenny & Raquel</strong>
+                    </div>
+                    <div class="comments-area p-3 flex-grow-1" id="comments-list"></div>
+                    <div class="p-3 border-top">
+                        <div class="d-flex mb-2 align-items-center">
+                            <button class="btn-action me-3" onclick="handleLike()"><i class="far fa-heart" id="like-icon"></i></button>
+                            <i class="far fa-comment fs-4"></i>
+                        </div>
+                        <strong id="like-count-display">0 curtidas</strong>
+                        <div class="input-group border-top pt-2 mt-2">
+                            <input type="text" id="comment-input" class="form-control border-0 p-0 bg-transparent" placeholder="Adicione um comentário...">
+                            <button class="btn text-purple fw-bold bg-transparent" onclick="postComment()">Postar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar fixed-bottom bg-hub border-top shadow-lg">
+        <div class="container d-flex justify-content-around">
+            <a href="index.html" class="nav-btn active"><i class="fas fa-home"></i></a>
+            <a href="tempo.html" class="nav-btn"><i class="fas fa-clock"></i></a>
+            <a href="motivos.html" class="nav-btn"><i class="fas fa-list-ul"></i></a>
+            <a href="quiz.html" class="nav-btn"><i class="fas fa-gamepad"></i></a>
+            <a href="secreto.html" class="nav-btn"><i class="fas fa-user-secret"></i></a>
+        </div>
+    </nav>
+
+    <!-- Bloqueio Global -->
+<div id="global-lock-overlay" class="lock-overlay">
+    <div class="lock-content text-center">
+        <i class="fas fa-lock fa-3x color-purple mb-4 heart-beat"></i>
+        <h1 class="font-love color-purple">Aguarde o momento especial...</h1>
+        <div id="main-countdown" class="countdown-badge shadow-lg mt-3">
+            <span id="lock-timer">00d 00h 00m 00s</span>
+        </div>
+    </div>
+</div>
+
+<!-- Envolva todo o conteúdo original (incluindo o Hub) em uma div de conteúdo -->
+<div id="site-content" style="display: none;">
+    <!-- Todo o seu código anterior aqui (Container, Modais, Hub, etc) -->
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

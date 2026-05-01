@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motivos e Adjetivos 💛</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-comfort" style="overflow: hidden;"> <!-- Overflow hidden para os adjetivos não criarem barra de rolagem -->
+    
+    <!-- Camada para os adjetivos aleatórios -->
+    <div id="adjectives-container" class="adjectives-layer"></div>
+
+    <div class="container d-flex align-items-center justify-content-center" style="height: 100vh; position: relative; z-index: 20;">
+        <div class="row justify-content-center w-100">
+            <div class="col-md-7 col-lg-5">
+                <!-- CARD CENTRAL ÚNICO -->
+                <div class="message-card shadow-lg p-5 rounded-4 text-center animate-float">
+                    <div class="mb-4">
+                        <i class="fas fa-crown fa-3x heart-beat" style="color: var(--yellow-gold);"></i>
+                    </div>
+                    <h2 class="font-love color-purple mb-3">O Motivo Principal</h2>
+                    <p class="highlight-text" style="font-size: 1.3rem;">
+                        "Porque em um mundo de bilhões de pessoas, o meu coração escolheu você para ser o meu lar, hoje e para sempre."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- HUB INFERIOR -->
+    <nav class="navbar fixed-bottom bg-hub border-top shadow-lg">
+        <div class="container d-flex justify-content-around">
+            <a href="index.html" class="nav-btn"><i class="fas fa-home"></i></a>
+            <a href="tempo.html" class="nav-btn"><i class="fas fa-clock"></i></a>
+            <a href="motivos.html" class="nav-btn active"><i class="fas fa-list-ul"></i></a>
+            <a href="quiz.html" class="nav-btn"><i class="fas fa-gamepad"></i></a>
+            <a href="secreto.html" class="nav-btn"><i class="fas fa-user-secret"></i></a>
+        </div>
+    </nav>
+
+    <!-- Bloqueio Global -->
+<div id="global-lock-overlay" class="lock-overlay">
+    <div class="lock-content text-center">
+        <i class="fas fa-lock fa-3x color-purple mb-4 heart-beat"></i>
+        <h1 class="font-love color-purple">Aguarde o momento especial...</h1>
+        <div id="main-countdown" class="countdown-badge shadow-lg mt-3">
+            <span id="lock-timer">00d 00h 00m 00s</span>
+        </div>
+    </div>
+</div>
+
+<!-- Envolva todo o conteúdo original (incluindo o Hub) em uma div de conteúdo -->
+<div id="site-content" style="display: none;">
+    <!-- Todo o seu código anterior aqui (Container, Modais, Hub, etc) -->
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
