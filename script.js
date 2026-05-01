@@ -193,6 +193,53 @@ document.addEventListener('DOMContentLoaded', function() {
     iniciarEfeitoAdjetivos();
 });
 
+// CONTROLE DE MÚSICA
+const music = document.getElementById('background-music');
+const progressBar = document.getElementById('progress-bar');
+const volumeControl = document.getElementById('volume-control');
+
+if (music) {
+    // Configura a barra ao carregar
+    music.addEventListener('loadedmetadata', () => {
+        progressBar.max = Math.floor(music.duration);
+        const durM = Math.floor(music.duration / 60);
+        const durS = Math.floor(music.duration % 60);
+        document.getElementById('duration-time').innerText = `${durM}:${durS < 10 ? '0'+durS : durS}`;
+    });
+
+    // Atualiza progresso
+    music.addEventListener('timeupdate', () => {
+        progressBar.value = Math.floor(music.currentTime);
+        const curM = Math.floor(music.currentTime / 60);
+        const curS = Math.floor(music.currentTime % 60);
+        document.getElementById('current-time').innerText = `${curM}:${curS < 10 ? '0'+curS : curS}`;
+    });
+
+    // Interatividade da barra
+    progressBar.addEventListener('input', () => {
+        music.currentTime = progressBar.value;
+    });
+
+    volumeControl.addEventListener('input', () => {
+        music.volume = volumeControl.value;
+    });
+}
+
+function restartMusic() {
+    music.currentTime = 0;
+}
+
+function toggleMusic() {
+    const btn = document.getElementById('music-control');
+    const icon = btn.querySelector('i');
+    if (music.paused) {
+        music.play();
+        icon.className = 'fas fa-pause';
+    } else {
+        music.pause();
+        icon.className = 'fas fa-play';
+    }
+}
 // QUIZ
 
 // CONFIGURAÇÃO DAS PERGUNTAS (Altere aqui!)

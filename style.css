@@ -109,9 +109,60 @@ body.bg-comfort { background-color: var(--bg-comfort); font-family: 'Montserrat'
     z-index: 25;
 }
 
-/* QUIZZZZZZ */
+/* CONTROLE DE MUSICA */
+.player-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
 
-/* Botões de Opção do Quiz */
+/* Container dos botões inferiores */
+.controls-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    width: 100%;
+}
+
+.btn-control-secondary {
+    background: transparent !important;
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+    color: var(--purple);
+    font-size: 1.4rem;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.btn-control-secondary:focus, 
+.btn-control-secondary:active {
+    outline: none !important;
+    border: none !important;
+}
+
+.btn-play-main {
+    background: var(--purple);
+    color: white;
+    border: none;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 15px rgba(142, 68, 173, 0.3);
+}
+
+
+/* QUIZZZZZZ */
 .btn-quiz-option {
     background-color: var(--card-custom);
     border: 2px solid var(--purple);
@@ -214,8 +265,6 @@ body.bg-comfort { background-color: var(--bg-comfort); font-family: 'Montserrat'
 .btn-purple { background-color: var(--purple); color: white; }
 
 /* BLOQUEIO */
-
-/* Overlay de Bloqueio */
 .lock-overlay {
     position: fixed;
     top: 0; left: 0; width: 100%; height: 100%;
